@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Else Program</title>
+  </head>
+  <body style="display: flex; flex-direction: column; align-items: center">
+    <h1 style="text-align: center; margin-top: 100px">
+      pilih program yang ingin anda jalankan
+    </h1>
+
+    <div
+      class="all-button"
+      style="margin-top: 150px; display: flex; align-items: center; gap: 50px"
+    >
+      <div
+        id="button-if-else"
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+        onclick="ifElse()"
+      >
+        If Else
+      </div>
+
+      <div
+        id="button-nested-if-else"
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+        onclick="nestedIfElse()"
+      >
+        Nested <br />
+        If Else
+      </div>
+
+      <div
+        id="button-switch-case"
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+        onclick="switchCase()"
+      >
+        Switch Case
+      </div>
+
+      <div
+        id=""
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+        onclick="forStatement()"
+      >
+        For <br />
+        Statement
+      </div>
+
+      <div
+        id=""
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+        onclick="whileStatement()"
+      >
+        While
+      </div>
+
+      <div
+        id=""
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+        onclick="doWhileStatement()"
+      >
+        DO While
+      </div>
+    </div>
+
+    <div style="width: 100%; padding-top: 100px; justify-content: center">
+      <!-- If Else -->
+      <div
+        id="program-if-else"
+        style="padding: 25px; margin: auto; width: fit-content; display: none"
+      >
+        <h1 style="color: rgb(0, 0, 0)" id="if-else">If Else</h1>
+
+        <label for="">Masukkan jenis kelamin anda (L/P) : </label>
+        <input type="text" name="" id="if-else-jk" />
+
+        <button id="if-else-submit" onclick="ifElse()">Submit</button>
+        <p id="if-else-hasil"></p>
+      </div>
+
+      <div
+        id="program-nested-if-else"
+        style="padding: 25px; margin: auto; width: max-content; display: none"
+      >
+        <h1 style="color: rgb(0, 0, 0)" id="if-else">Nested If Else</h1>
+
+        <label for="">Masukkan jenis makanan anda (vegan / daging) : </label>
+        <input type="text" name="" id="nested-if-else-jm" />
+
+        <br />
+        <br />
+
+        <label for="" id="layout-babi-label" style="display: none"
+          >Apakah anda boleh memakan daging babi? (boleh / tidak) :
+        </label>
+        <input
+          style="display: none"
+          class="q-babi"
+          type="text"
+          name=""
+          id="nested-if-else-daging"
+        />
+
+        <br />
+        <button id="nested-if-else-submit" onclick="nestedIfElse()">
+          Submit
+        </button>
+
+        <p id="nested-if-else-hasil"></p>
+      </div>
+
+      <div
+        id="switch-case"
+        style="padding: 25px; margin: auto; width: max-content; display: none"
+      >
+        <div>
+          <h1>Switch Case</h1>
+          <h3>Pilih Mobil Anda</h3>
+
+          <select id="pilihanMobil">
+            <option value="">Pilih Mobil</option>
+            <option value="GTR">GTR</option>
+            <option value="Innova">Innova</option>
+            <option value="Pajero">Pajero</option>
+            <option value="Ferrari">Ferrari</option>
+          </select>
+
+          <p id="hasil-switch-case"></p>
+          <button onclick="switchCase()">Submit</button>
+        </div>
+      </div>
+
+      <div
+        id="for-statement"
+        style="padding: 25px; margin: auto; width: fit-content; display: none"
+      >
+        <h1>For Statement</h1>
+        <p>I Love Infinite Learning 💖</p>
+        <p>Anda ingin mencetak kalimat diatas berapa kali ?</p>
+        <input type="number" name="" id="for-input" />
+        <ul id="render"></ul>
+        <button onclick="forStatement()">Submit</button>
+      </div>
+
+      <div
+        id="while-statement"
+        style="padding: 25px; margin: auto; width: fit-content; display: none"
+      >
+        <h1>While Statement</h1>
+        <p>Render While Statement 🖥️</p>
+        <p>Anda ingin mencetak kalimat diatas berapa kali ?</p>
+        <input type="number" name="" id="while-input" />
+        <ul id="render-while"></ul>
+        <button onclick="whileStatement()">Submit</button>
+      </div>
+
+      <div
+        id="do-while-statement"
+        style="padding: 25px; margin: auto; width: fit-content; display: none"
+      >
+        <h1>Do While Statement</h1>
+        <p>Render Do While Statement 🖥️</p>
+        <p>Anda ingin mencetak kalimat diatas berapa kali ?</p>
+        <input type="number" name="" id="do-while-input" />
+        <ul id="render-do-while"></ul>
+        <button onclick="doWhileStatement()">Submit</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
